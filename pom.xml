@@ -123,6 +123,14 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- slf4j依赖 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+
+
     </dependencies>
 
 

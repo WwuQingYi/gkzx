@@ -19,6 +19,9 @@ public class ConfigName {
     public static final String FLINK_MAX_CONCURRENT_CHECKPOINTS = "flink.max.concurrent.checkpoints";
     public static final String FLINK_ENABLE_INCREMENTAL_CHECKPOINTING = "flink.enable.incremental.checkpointing";
 
+    // TODO flink-table的配置
+    public static final String FLINK_TABLE_BATCH_SIZE = "table.exec.mini.batch.size";
+
     // TODO kafka的配置
     public static final String KAFKA_BOOTSTRAP_SERVERS = "kafka.bootstrap.servers";
     public static final String KAFKA_TABLE_OFFSET_EARLIEST = "kafka.table.offset.reset";
