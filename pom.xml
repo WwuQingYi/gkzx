@@ -160,7 +160,7 @@
         </pluginRepository>
     </pluginRepositories>
 
-
+    <!-- 打jar依赖-->
     <build>
 
         <plugins>
