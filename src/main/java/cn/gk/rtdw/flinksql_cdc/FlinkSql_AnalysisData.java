@@ -1,6 +1,5 @@
 package cn.gk.rtdw.flinksql_cdc;
 
-import cn.gk.rtdw.utils.FlinkUtils;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
@@ -13,6 +12,7 @@ public class FlinkSql_AnalysisData {
         // 获取 执行对象
         StreamExecutionEnvironment env = FlinkUtils.env;
         StreamTableEnvironment tableEnv = FlinkUtils.getTableEnv();
+
 
 
 
