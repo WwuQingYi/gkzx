@@ -10,5 +10,8 @@
         <module name="rtdw" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rtdw" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
