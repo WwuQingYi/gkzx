@@ -51,5 +51,9 @@ public class ConfigName {
     public static final String MYSQL_JDBC_URL = "mysql.url";
     public static final String MYSQL_JDBC_USER = "mysql.user";
     public static final String MYSQL_JDBC_PASSWORD = "mysql.password";
+    public static final String MYSQL_HOSTNAME   = "hostname";
+    public static final String MYSQL_PORT   = "port";
+    public static final String MYSQL_DATABASE   = "database.name";
+    public static final String MYSQL_SCAN_MODE   = "scan.startup.mode";
 
 }
