@@ -47,7 +47,7 @@ public class CreateTableSql {
                     " ,completionstate   INT        " +
                     " ,viewed            INT        " +
                     " ,overrideby        BIGINT     " +
-                    " ,timemodified       BIGINT    " +
+                    " ,timemodified      BIGINT     " +
                     " ,PRIMARY KEY(id) NOT ENFORCED " +
                     ") WITH ( " +
                     " 'connector' = 'mysql-cdc', " +
@@ -116,7 +116,7 @@ public class CreateTableSql {
                     " ,legacyfiles             INT     " +
                     " ,marker                  BIGINT  " +
                     " ,maxbytes                BIGINT  " +
-                    " ,newsitems               mediumINT" +
+                    " ,newsitems               INT     " +
                     " ,relativedatesmode       INT     " +
                     " ,requested               INT     " +
                     " ,shortname               STRING  " +
@@ -147,7 +147,7 @@ public class CreateTableSql {
     public static final String create_mdl_logstore_standard_log =
             "CREATE TABLE mdl_logstore_standard_log  (   " +
                     "  action             STRING  " +
-                    " ,anonymous          tinyINT " +
+                    " ,anonymous          INT     " +
                     " ,component          STRING  " +
                     " ,contextid          BIGINT  " +
                     " ,contextinstanceid  BIGINT  " +
@@ -265,11 +265,11 @@ public class CreateTableSql {
                     " ,maxattachments          BIGINT  " +
                     " ,maxbytes                BIGINT  " +
                     " ,name                    STRING  " +
-                    " ,rssarticles             tinyINT " +
-                    " ,rsstype                 tinyINT " +
+                    " ,rssarticles             INT     " +
+                    " ,rsstype                 INT     " +
                     " ,scale                   BIGINT  " +
                     " ,timemodified            BIGINT  " +
-                    " ,trackingtype            tinyINT " +
+                    " ,trackingtype            INT     " +
                     " ,`type`                  STRING  " +
                     " ,warnafter               BIGINT  " +
                     " ,PRIMARY KEY(id) NOT ENFORCED    " +
@@ -817,5 +817,27 @@ public class CreateTableSql {
                     " 'database-name' = '" + config.getString(ConfigName.MYSQL_DATABASE) + "'        ," +
                     " 'table-name' = 'mdl_modules' " +
                     ")";
+
+
+ /*   测试代码
+ public static final String create_mdl_modules2 =
+            "CREATE TABLE mdl_modules2  (   " +
+                    "  cron     BIGINT " +
+                    " ,id       BIGINT " +
+                    " ,lastcron BIGINT " +
+                    " ,name     STRING " +
+                    " ,`search` STRING " +
+                    " ,visible  INT    " +
+                    " ,PRIMARY KEY(id) NOT ENFORCED " +
+                    ") WITH ( " +
+                    " 'connector' = 'mysql-cdc', " +
+                    " 'scan.startup.mode' = 'initial'  ," +
+                    " 'hostname' = '114.115.169.37' ," +
+                    " 'port' = '3306' ," +
+                    " 'username' = 'root' ," +
+                    " 'password' = 'Ouc#1234' ," +
+                    " 'database-name' = 'syxy_test' ," +
+                    " 'table-name' = 'mdl_modules' " +
+                    ")";*/
 
 }

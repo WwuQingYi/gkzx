@@ -3,7 +3,6 @@ package cn.gk.rtdw.flinksql_cdc;
 import cn.gk.rtdw.query_sql.QuerySQL;
 import cn.gk.rtdw.tools.CreateTableSql;
 import cn.gk.rtdw.utils.*;
-
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
@@ -25,7 +24,7 @@ public class FlinkSql_AnalysisData {
          * 解析mysql表
          */
 
-        tableEnv.executeSql(CreateTableSql.create_mdl_groups); // mdl_groups
+        /*tableEnv.executeSql(CreateTableSql.create_mdl_groups); // mdl_groups
         Table mdl_groupSqlQuery = tableEnv.sqlQuery("select * from mdl_groups");
         tableEnv.toRetractStream(mdl_groupSqlQuery, Row.class).print();
 
@@ -147,7 +146,7 @@ public class FlinkSql_AnalysisData {
 
         tableEnv.executeSql(CreateTableSql.create_mdl_modules);   //  mdl_modules
         Table mdl_modules_SqlQuery = tableEnv.sqlQuery("select * from mdl_modules");
-        tableEnv.toRetractStream(mdl_modules_SqlQuery, Row.class).print();
+        tableEnv.toRetractStream(mdl_modules_SqlQuery, Row.class).print(); */
 
         /**   25 个表
          * mdl_course_modules_completion
@@ -176,10 +175,14 @@ public class FlinkSql_AnalysisData {
          * mdl_quiz_attempts
          * mdl_course_sections
          */
-
-        //   QuerySQL
+        //   QuerySQL - Test 可能会使用的测试表
         Table behavior_view = tableEnv.sqlQuery(QuerySQL.v_behavior);
-        tableEnv.toRetractStream(behavior_view, Row.class).print();
+        Table v_teacherusers = tableEnv.sqlQuery(QuerySQL.v_teacherusers);
+        Table v_studentusers = tableEnv.sqlQuery(QuerySQL.v_studentusers);
+        Table v_studentlogindetails = tableEnv.sqlQuery(QuerySQL.v_studentlogindetails);
+        Table v_forum = tableEnv.sqlQuery(QuerySQL.v_forum);
+        Table v_allbehaviorandbrowse = tableEnv.sqlQuery(QuerySQL.v_allbehaviorandbrowse);
+
 
         env.execute();
 

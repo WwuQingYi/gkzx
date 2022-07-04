@@ -1,0 +1,59 @@
+clickhouse 连接信息
+ip: 192.168.42.126
+user: default
+password: BwwkP-8rRn@Ud-RE
+-------------------------------
+ip: 192.168.42.126
+user: testuser
+password: a3eWrLgB-YRE
+
+mysql:  连接信息[直播相关]
+ip: 119.3.193.110
+user: liveservice
+password: UZ9Q63q@34Wyp+YADLe_
+-------------------------------
+mysql: syxy_test
+ip: 114.115.169.37  [phpmyadmin地址: myadmin.ouc-online.com.cn]
+user: root
+password: Ouc#1234
+
+
+kafka: 连接信息
+ip: 192.168.42.126:9092,192.168.42.109:9092,192.168.42.133:9092
+host: 192.168.42.126
+
+
+redis: 连接信息
+ip: 119.3.204.174
+port: 6739
+password: 3U7p46-LKwQd_mf
+
+
+测试集群:
+USDP社区版V2.0.x 大数据平台 功能简介 https://docs.ucloud.cn/usdp_community/2.0.x/release_notes
+大数据平台: http://192.168.42.126/
+user: admin
+password: NFhR2nhpX_xc36td
+
+IP:
+     udp01：192.168.42.126
+     udp02：192.168.42.109
+     udp03：192.168.42.133
+用户：root
+密码：U8Bph-cXZswWVtGuwinu
+
+
+module平台:
+ip: 114.115.169.37 dev.syxy.ouchn.cn
+user: admin
+password: Ouc#1234
+
+
+华为云集群:
+ip: 114.115.169.37
+user: root
+password: 4t4j+rmGXxit98YQ
+
+
+
+
