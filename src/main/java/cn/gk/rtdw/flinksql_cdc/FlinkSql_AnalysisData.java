@@ -1,12 +1,9 @@
 package cn.gk.rtdw.flinksql_cdc;
 
-import cn.gk.rtdw.query_sql.QuerySQL;
-import cn.gk.rtdw.tools.CreateTableSql;
 import cn.gk.rtdw.utils.*;
+import org.apache.flink.api.common.RuntimeExecutionMode;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
-import org.apache.flink.types.Row;
 
 
 /**
@@ -19,6 +16,10 @@ public class FlinkSql_AnalysisData {
         // 获取 执行对象
         StreamExecutionEnvironment env = FlinkUtils.env;
         StreamTableEnvironment tableEnv = FlinkUtils.getTableEnv();
+
+        // TODO 设置运行模式 STREAMING, BATCH, AUTOMATIC
+
+        env.setRuntimeMode(RuntimeExecutionMode.BATCH);
 
         /**
          * 解析mysql表
@@ -175,13 +176,15 @@ public class FlinkSql_AnalysisData {
          * mdl_quiz_attempts
          * mdl_course_sections
          */
-        //   QuerySQL - Test 可能会使用的测试表
-        Table behavior_view = tableEnv.sqlQuery(QuerySQL.v_behavior);
-        Table v_teacherusers = tableEnv.sqlQuery(QuerySQL.v_teacherusers);
-        Table v_studentusers = tableEnv.sqlQuery(QuerySQL.v_studentusers);
-        Table v_studentlogindetails = tableEnv.sqlQuery(QuerySQL.v_studentlogindetails);
-        Table v_forum = tableEnv.sqlQuery(QuerySQL.v_forum);
-        Table v_allbehaviorandbrowse = tableEnv.sqlQuery(QuerySQL.v_allbehaviorandbrowse);
+        //   QuerySQL - Test
+        /*
+        Table behavior_view = tableEnv.sqlQuery(QueryViewSQL.v_behavior);
+        Table v_teacherusers = tableEnv.sqlQuery(QueryViewSQL.v_teacherusers);
+        Table v_studentusers = tableEnv.sqlQuery(QueryViewSQL.v_studentusers);
+        Table v_studentlogindetails = tableEnv.sqlQuery(QueryViewSQL.v_studentlogindetails);
+        Table v_forum = tableEnv.sqlQuery(QueryViewSQL.v_forum);
+        Table v_allbehaviorandbrowse = tableEnv.sqlQuery(QueryViewSQL.v_allbehaviorandbrowse);
+        */
 
 
         env.execute();

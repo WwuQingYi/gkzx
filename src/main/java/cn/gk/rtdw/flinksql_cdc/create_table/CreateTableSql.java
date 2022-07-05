@@ -1,4 +1,4 @@
-package cn.gk.rtdw.tools;
+package cn.gk.rtdw.flinksql_cdc.create_table;
 
 import cn.gk.rtdw.utils.ConfigName;
 import com.typesafe.config.Config;
@@ -6,7 +6,7 @@ import com.typesafe.config.ConfigFactory;
 
 /**
  * @Date：2022/7/1
- * @Description： executeSql 工具类
+ * @Description：flink-sql解析mysql数据
  */
 public class CreateTableSql {
 
@@ -70,7 +70,7 @@ public class CreateTableSql {
                     " ,section                        BIGINT  " +
                     " ,idnumber                       STRING  " +
                     " ,added                          BIGINT  " +
-                    // " ,`scores`                       INT     " +  // 有问题
+                    " ,`score`                        INT     " +
                     " ,indent                         INT     " +
                     " ,visible                        INT     " +
                     " ,visibleoncoursepage            INT     " +
