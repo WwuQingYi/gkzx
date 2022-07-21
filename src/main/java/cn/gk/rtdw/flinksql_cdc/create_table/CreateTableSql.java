@@ -324,6 +324,7 @@ public class CreateTableSql {
                     " ,mnethostid           BIGINT  " +
                     " ,moodlenetprofile     STRING  " +
                     " ,msn                  STRING  " +
+                    " ,`username`           STRING  " +
                     " ,`password`           STRING  " +
                     " ,phone1               STRING  " +
                     " ,phone2               STRING  " +
@@ -375,7 +376,7 @@ public class CreateTableSql {
 
 
     public static final String create_mdl_context =
-            "CREATE TABLE mdl_role_assignments  (  " +
+            "CREATE TABLE mdl_context  (  " +
                     "  contextlevel   BIGINT  " +
                     " ,depth          INT     " +
                     " ,id             BIGINT  " +
@@ -396,7 +397,7 @@ public class CreateTableSql {
 
 
     public static final String create_mdl_grade_grades =
-            "CREATE TABLE mdl_role_assignments  (   " +
+            "CREATE TABLE mdl_grade_grades  (   " +
                     "   aggregationstatus     STRING   " +
                     "  ,aggregationweight     decimal  " +
                     "  ,excluded              BIGINT   " +
