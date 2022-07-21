@@ -1,4 +1,4 @@
-package cn.gk.rtdw.flinksql_cdc.create_table;
+package cn.gk.rtdw.flinksql_cdc;
 
 import cn.gk.rtdw.utils.ConfigName;
 import com.typesafe.config.Config;

@@ -1,6 +1,6 @@
 package cn.gk.rtdw.main;
 
-import cn.gk.rtdw.flinksql_cdc.create_table.CreateTableSql;
+import cn.gk.rtdw.flinksql_cdc.CreateTableSql;
 import cn.gk.rtdw.query_sql.QueryResultSQLString;
 import cn.gk.rtdw.utils.FlinkUtils;
 import cn.gk.rtdw.view.QueryNeedView;
