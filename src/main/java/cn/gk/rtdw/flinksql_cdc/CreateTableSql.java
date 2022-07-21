@@ -146,26 +146,27 @@ public class CreateTableSql {
 
     public static final String create_mdl_logstore_standard_log =
             "CREATE TABLE mdl_logstore_standard_log  (   " +
-                    "  action             STRING  " +
-                    " ,anonymous          INT     " +
-                    " ,component          STRING  " +
-                    " ,contextid          BIGINT  " +
-                    " ,contextinstanceid  BIGINT  " +
-                    " ,contextlevel       BIGINT  " +
-                    " ,courseid           BIGINT  " +
-                    " ,crud               STRING  " +
-                    " ,edulevel           INT     " +
-                    " ,eventname          STRING  " +
-                    " ,id                 BIGINT  " +
-                    " ,ip                 STRING  " +
-                    " ,objectid           BIGINT  " +
-                    " ,objecttable        STRING  " +
-                    " ,origin             STRING  " +
-                    " ,other              STRING  " +
-                    " ,realuserid         BIGINT  " +
-                    " ,relateduserid      BIGINT  " +
-                    " ,target             STRING  " +
-                    " ,timecreated        BIGINT  " +
+                    "  id 				bigint			"+
+                    " ,eventname 		string         " +
+                    " ,component 		string         " +
+                    " ,action 			string         " +
+                    " ,target 			string         " +
+                    " ,objecttable 		string         " +
+                    " ,objectid			bigint         " +
+                    " ,crud 			string         " +
+                    " ,edulevel			int            " +
+                    " ,contextid 		bigint         " +
+                    " ,contextlevel		bigint         " +
+                    " ,contextinstanceid	bigint     " +
+                    " ,userid 			bigint	       " +
+                    " ,courseid 		bigint         " +
+                    " ,relateduserid	bigint          " +
+                    " ,anonymous 		int            " +
+                    " ,other 			string         " +
+                    " ,timecreated		bigint         " +
+                    " ,origin 			string         " +
+                    " ,ip				string         " +
+                    " ,realuserid		bigint         " +
                     " ,PRIMARY KEY(id) NOT ENFORCED  " +
                     ") WITH ( " +
                     " 'connector' = 'mysql-cdc', " +
